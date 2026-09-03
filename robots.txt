@@ -1,0 +1,37 @@
+# SZN Store - robots.txt
+# Controls which pages search engines can crawl
+
+User-agent: *
+
+# Allow main public pages
+Allow: /
+Allow: /shop.php
+Allow: /product.php
+Allow: /contact.php
+Allow: /assets/
+
+# Block private/admin pages
+Disallow: /admin/
+Disallow: /admin.php
+Disallow: /cart.php
+Disallow: /checkout.php
+Disallow: /wishlist.php
+Disallow: /profile.php
+Disallow: /orders.php
+
+# Block system files and folders
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /uploads/
+Disallow: /security.php
+Disallow: /db.php
+Disallow: /.env
+Disallow: /.htaccess
+
+# Block search/filter URLs with too many parameters (avoid duplicate content)
+Disallow: /*?sort=
+Disallow: /*?page=
+Disallow: /*?search=
+
+# Sitemap location
+Sitemap: /sitemap.php
